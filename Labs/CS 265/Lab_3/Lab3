@@ -1,0 +1,18 @@
+Regular Expressions
+1. egrep 'the' bright_side_of_life
+2. egrep -w 'the' bright_side_of_life 
+3. egrep -w 'Just' bright_side_of_life 
+4. egrep 'just|Just' bright_side_of_life 
+5. egrep '^Just|^just' bright_side_of_life
+6. egrep -w "mad|bad" bright_side_of_life
+7. egrep -w "death|breath" bright_side_of_life
+8. egrep -w "you.$" bright_side_of_life 
+9. egrep '^ ' bright_side_of_life 
+10. egrep -c '^$' bright_side_of_life 
+11. egrep -c '^' bright_side_of_life
+Anagram
+The anagram Executable is the file for this part.
+Git
+1. git reset
+2. you can see the history of commits in the git repository
+  

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+ARCHIVE=~/../kschmidt/public_html/Files/DrMathArchive/
+#Makes sure you entered 3 arguments
+if (( $# !=  3)) ; then 
+	echo "You need 3 arguments Year Month Day"
+	echo "EX 2003 09 12"
+	exit 1
+fi
+
+
+#Changes the ordereing of the argunets
+mailDate=$2/$3/$1
+
+#goes though all the files to find what you are looking for
+grep -RlF "$mailDate" $ARCHIVE | xargs -L 1 basename
+
+#echo "$mailDate"  

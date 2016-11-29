@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<!-- Infix Parser Build File-->
+
+<project>
+  <property name="source.dir" location="."/>
+  <property name="doc.dir" location="doc"/>
+
+  
+  <!-- set up doc directory used by this project -->
+  <target name="init" description="setup project directory">
+    <mkdir dir="${doc.dir}"/>
+  </target>
+
+  <path id="project.class.path">
+    <pathelement path='${classpath}'/>
+    <pathelement location='.'/>
+  </path>
+
+  <target name='run' depends='compile'>
+		<java classname='infixParser'>
+			<classpath refid="project.class.path"/>
+			
+		</java>
+	</target>
+	
+  <target name='compile'>
+    <javac srcdir='./' includes='infixParser.java' includeantruntime='false'/>
+  </target>
+
+
+  <target name='clean'>
+    <delete>
+			<fileset dir='./'>
+				<include name='*.class'/>
+			</fileset>
+		</delete>
+  </target>
+
+  <!-- Generate javadoc for current project into directory ${doc.dir} -->
+  <target name="doc" depends='init' description="generate documentation">
+    <javadoc sourcepath="${source.dir}" destdir="${doc.dir}" classpath="${source.dir}" >
+      <fileset dir="."/>
+  	</javadoc>
+  </target>
+
+</project>

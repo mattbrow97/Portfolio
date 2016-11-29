@@ -1,0 +1,36 @@
+#!/bin/bash
+
+ARCHIVE=~/../kschmidt/public_html/Files/DrMathArchive/
+c=`pwd`
+
+#echo "$PWD"
+
+#goes though all the directoies and subdirectoes.
+#it also puts the number of files in each directory and the diretory name
+#into a file
+(cd $ARCHIVE && for d in ./*/ ; do ( 
+	cd "$d" && find . -type f | wc -l | tr '\n' ' ' >> $c/prob2.txt && echo "$d" >> $c/prob2.txt
+); done)
+
+
+#sorts the file
+sort -r -n -o prob2.txt prob2.txt
+
+#reads the biggest number in the file
+read -r bigNumber<prob2.txt
+
+#strips off evetything but the number from the first line
+bigNumber=$(echo $bigNumber | awk '{print $1}')
+
+#echo "$bigNumber"
+
+
+#gets all the subdirectoes with that number into a seprate file
+awk '$1 >= '$bigNumber' { print }' prob2.txt >> prob2final.txt
+
+#prints the answer
+cat prob2final.txt
+
+#deleates the 2 temp files
+rm -r -f prob2.txt 
+rm -r -f prob2final.txt

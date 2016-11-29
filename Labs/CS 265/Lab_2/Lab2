@@ -1,0 +1,15 @@
+1. ./CS265/Lab2/eg.bash
+   ./.viminfo
+2. find .  -name "*.bash"
+3. ./CS265/Lab1/hello.bash
+   ./CS265/Lab2/eg.bash
+   ./tmp/gotMe.bash
+4. 97  499 2960 breadIsDangerous.txt
+5. wc -l breadIsDangerous.txt | grep "the" breadIsDangerous.txt 
+6. spellExample.bak is the one that wasent spell checked 
+7. it shows the differences in the lines that were changed
+8. there was no ouput becasue theres no differences in the 2 files
+9. what the echo $? is it prints the exit value of the prevous command. so
+the first command worked and the second 2 commands didnt so they got a exit
+command of 1 and 2
+

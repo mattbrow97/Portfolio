@@ -1,0 +1,34 @@
+#!/bin/bash
+# reextend swaps file extentions
+#
+# Matthew Brower
+#	10/02
+# 
+# Platform: Linux 4.4.0-36-generic x86_64 
+# 
+# EDITOR: tabstop=2, cols=80
+# 
+# 
+#
+for music in *.mp3; do
+dash=$(expr index "$music" "-");
+#echo "dash:$dash";
+#echo music:$dash;
+song=${music:$dash};
+#echo "song1 $song"
+#echo ${song#" "};
+song=${song#" "};
+#echo "song2 $song"
+artist=${music:0:$dash};
+#echo "artist1 $artist"
+artist=${artist%" -"};
+#echo "artist2 $artist"
+allPath="$artist""/""$song";
+#echo "$allPath";
+if [ ! -d "$artist" ]
+	then
+		mkdir "$artist"
+fi
+
+mv "$music" "$allPath";
+done

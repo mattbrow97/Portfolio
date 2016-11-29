@@ -1,0 +1,11 @@
+For the Prob1 file it counts the number of directores and the files in that
+directory
+
+for the Prob2 file it prints out the largers number of files in a subdirecty
+and the name of that directoy
+
+for Prob3 you need to enter 3 arguments in the order of year month day EX
+2003 09 12 then it will find all the files that were sent on that day
+
+For prob4 it gets hostnames and srts them from most occuring to least
+occuting and it tells you the total number of hostnames

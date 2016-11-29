@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ARCHIVE=~/../kschmidt/public_html/Files/DrMathArchive/
+
+#echo "The Number of proublems"
+ls $ARCHIVE | wc -w | tr '\n' ' '
+
+#echo "Total Number of Messages"
+find $ARCHIVE -type f | wc -l
+
+

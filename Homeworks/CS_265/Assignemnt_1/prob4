@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+ARCHIVE=~/../kschmidt/public_html/Files/DrMathArchive/
+c=`pwd`
+#gets the hostnames in full
+egrep -Rhm 1 "^To: *" $ARCHIVE >> to.txt
+
+
+#removes evrything after the @ sign
+while read f; do 
+	cut -f1 -d"@" >> cut4.txt
+done < to.txt
+
+
+#sorts the file 
+sort cut4.txt | sort -n -r | uniq -c >> sort4.txt
+
+total=$(wc -l sort4.txt)
+
+echo "Total " $total >> sort4.txt
+
+cat sort4.txt 
+
+rm -f sort4.txt 
+rm -f cut4.txt
+rm -f to.txt

@@ -1,0 +1,85 @@
+1.1 The Varaible names are define as 0 for true and 1 for false but they are
+never acutally used in the program and the words true and false are used
+
+1.2
+int smaller(char *s, char *t) {
+	if(stringComp (s, t) <1)
+		return 1;
+	else
+		return 0;
+}
+
+1.3
+i Read aloud
+
+1.4 
+if( (c !=y || y ) )
+	return;
+if(length < BUFSIZE)
+	length=length;
+else
+	length=BUFSIZE
+
+if(flag==0)
+	return 1
+
+if(*line == '"')
+	quote = 1;
+else
+	quote = 0;
+
+if val( &1)
+	bit =1;
+else
+	bit =0;
+
+1.5
+The * is missing from the call fo scanf so it will error
+
+1.6 
+2 2
+
+1.7
+if(istty(stdin))
+else if (istty(stdout))
+else if (istty(stderr))
+else
+	return 0;
+
+if(retval != SUCCESS)
+	return retval;
+else
+	return SUCCESS;
+
+for(int k=0; k<5; k++)
+{
+	int x += dx;
+	scanf("%lf", &dx);
+}
+
+1.8 
+for(int count=0; count < total; count++)
+{
+	return true;
+}
+
+1.9
+it reuses a varaible which could cause an issue. the operator is writtan
+with a ? rather then an if-else statement which could cause an issue and is
+harder to read
+
+1.10
+enum
+{
+	FTZMETER = 0.3048
+	METERZFT = 3.28084
+	MIZFT = 5280.0
+	MIZKM = 1.609344
+	SQMIZSQKM = 2.589988
+}
+
+1.11
+
+The first comment is not needed
+The second comment controdicts what the code is doing
+The final 2 comments dont explan enfough of what is happening in the code
